@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B1220;
+  --foreground: #F8F7F2;
+  --brand-orange: #FFB347;
+
+  --brand-dark-blue: #1E293B;
+  --brand-gray-blue: #334155;
+  --brand-deep-blue: #0F172A;
+  --card-bg: #0F172A;
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-dark-blue: var(--brand-dark-blue);
+  --color-brand-gray-blue: var(--brand-gray-blue);
+  --color-brand-deep-blue: var(--brand-deep-blue);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  
+  --font-sans: var(--font-anuphan), "Inter", sans-serif;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+@layer base {
+  * {
+    border-color: var(--card-border);
+  }
+}
+
+/* Animated background floating orbs */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -40px) scale(1.05);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(40px, 30px) scale(1.02);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 30px) scale(1.03);
+  }
+  66% {
+    transform: translate(30px, -20px) scale(0.97);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, -35px) scale(1.04);
+  }
+}
+
+@utility animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+@utility animate-float-medium {
+  animation: float-medium 15s ease-in-out infinite;
+}
+
+@utility animate-float-fast {
+  animation: float-fast 10s ease-in-out infinite;
+}
+
+@utility bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 400px;
+  }
+}
+
+@utility animate-drift {
+  animation: drift 60s linear infinite;
+}
+
+/* Mascot wandering animations across the whole screen */
+@keyframes wander-1 {
+  0%, 100% { transform: translate(0, 0) rotate(-12deg); }
+  20% { transform: translate(-30vw, 20vh) rotate(5deg); }
+  40% { transform: translate(-60vw, -10vh) rotate(-15deg); }
+  60% { transform: translate(-20vw, -40vh) rotate(10deg); }
+  80% { transform: translate(10vw, -20vh) rotate(-5deg); }
+}
+
+@keyframes wander-2 {
+  0%, 100% { transform: translate(0, 0) rotate(10deg); }
+  25% { transform: translate(40vw, -30vh) rotate(-10deg); }
+  50% { transform: translate(70vw, -10vh) rotate(15deg); }
+  75% { transform: translate(30vw, 20vh) rotate(-5deg); }
+}
+
+@keyframes wander-3 {
+  0%, 100% { transform: translate(0, 0) rotate(-15deg) scaleX(-1); }
+  33% { transform: translate(30vw, 25vh) rotate(10deg) scaleX(-1); }
+  66% { transform: translate(-10vw, 50vh) rotate(-5deg) scaleX(-1); }
+}
+
+@utility animate-wander-1 {
+  animation: wander-1 40s ease-in-out infinite;
+}
+
+@utility animate-wander-2 {
+  animation: wander-2 35s ease-in-out infinite;
+}
+
+@utility animate-wander-3 {
+  animation: wander-3 45s ease-in-out infinite;
+}
+
