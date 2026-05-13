@@ -76,18 +76,23 @@ export default function Navbar() {
               onClick={() => handleNavClick("#top", "home")} 
               className="flex items-center gap-3 cursor-pointer"
             >
+              {/* Text for mobile, Image for desktop */}
+              <div className="sm:hidden font-black text-lg tracking-tighter text-brand-orange">
+                iamc9ju.dev
+              </div>
+              
               <Image
                 src="/images/iamc9ju_logo.svg"
                 alt="Logo"
                 width={40}
                 height={40}
-                className="rounded-xl shadow-lg shadow-brand-orange/10 w-9 h-9 md:w-10 md:h-10"
+                className="hidden sm:block rounded-xl shadow-lg shadow-brand-orange/10 w-10 h-10"
               />
               <div className="hidden sm:block leading-tight text-left">
-                <div className="font-bold text-sm md:text-base tracking-tight text-foreground">
+                <div className="font-bold text-base tracking-tight text-foreground">
                   อิทธิพล บทมูล
                 </div>
-                <div className="text-[9px] md:text-[10px] text-brand-orange font-medium uppercase tracking-wider">
+                <div className="text-[10px] text-brand-orange font-medium uppercase tracking-wider">
                   FULL-STACK DEVELOPER
                 </div>
               </div>
