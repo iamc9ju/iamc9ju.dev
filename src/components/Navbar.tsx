@@ -127,16 +127,6 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-2 md:gap-4">
-            {/* Language Selector - Hidden on very small screens */}
-            <div className="hidden xs:flex bg-black/30 rounded-xl p-1 border border-white/5">
-              <button type="button" className="bg-white/10 text-foreground px-2 md:px-3 py-1 md:py-1.5 rounded-lg text-[10px] md:text-xs font-bold hover:bg-white/20">
-                TH
-              </button>
-              <button type="button" className="text-foreground/40 hover:text-foreground/70 px-2 md:px-3 py-1 md:py-1.5 rounded-lg text-[10px] md:text-xs font-bold">
-                EN
-              </button>
-            </div>
-
             {/* Mobile Menu Toggle */}
             <button 
               type="button"
@@ -194,11 +184,6 @@ export default function Navbar() {
               <ChatBubbleLeftRightIcon className="w-7 h-7" />
               ติดต่อเรา
             </button>
-
-            <div className="flex gap-4 mt-8">
-              <button type="button" className="bg-brand-orange text-background px-6 py-2 rounded-xl font-bold">TH</button>
-              <button type="button" className="bg-white/5 text-foreground/60 px-6 py-2 rounded-xl font-bold border border-white/5">EN</button>
-            </div>
           </div>
         </div>
       )}
