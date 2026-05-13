@@ -63,14 +63,14 @@ export default function Workflow() {
               {workflowSlides.map((slide) => (
                 <div
                   key={slide.id}
-                  className="w-full flex-shrink-0 relative aspect-[16/10] md:aspect-[16/8]"
+                  className="w-full flex-shrink-0 relative aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/8]"
                 >
                   <Image
                     src={slide.src}
                     alt={slide.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
-                    className="object-contain p-6 md:p-12"
+                    className="object-contain p-2 sm:p-6 md:p-12"
                     priority
                   />
                 </div>

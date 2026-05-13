@@ -59,26 +59,26 @@ export default function WebTypes() {
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-brand-orange font-bold text-sm tracking-[0.2em] uppercase mb-4">Choose Your Solution</h2>
-          <h3 className="text-4xl md:text-5xl font-black mb-6">คุณต้องการเว็บแบบไหน?</h3>
-          <p className="text-foreground/40 max-w-2xl mx-auto text-lg">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-brand-orange font-bold text-xs tracking-[0.2em] uppercase mb-4">Choose Your Solution</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6">คุณต้องการเว็บแบบไหน?</h3>
+          <p className="text-foreground/40 max-w-2xl mx-auto text-base md:text-lg px-4 md:px-0">
             ไม่ว่าเป้าหมายของคุณคืออะไร เรามีโซลูชันที่ออกแบบมาเพื่อตอบโจทย์ธุรกิจของคุณโดยเฉพาะ
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           {types.map((type, index) => {
             const Icon = type.icon;
             return (
               <div 
                 key={index} 
-                className="group relative bg-brand-deep-blue/40 border border-card-border p-8 rounded-[32px] transition-all duration-500 hover:border-brand-orange/40 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                className="group relative bg-brand-deep-blue/40 border border-card-border p-6 md:p-8 rounded-[24px] md:rounded-[32px] transition-all duration-500 hover:border-brand-orange/40 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
               >
-                <div className={`w-14 h-14 rounded-2xl ${type.color} flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
-                  <Icon className="w-8 h-8" />
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl ${type.color} flex items-center justify-center mb-5 md:mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
+                  <Icon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h4 className="text-xl font-bold mb-3 group-hover:text-brand-orange transition-colors">{type.title}</h4>
+                <h4 className="text-lg md:text-xl font-bold mb-3 group-hover:text-brand-orange transition-colors">{type.title}</h4>
                 <p className="text-foreground/50 text-sm leading-relaxed">
                   {type.description}
                 </p>

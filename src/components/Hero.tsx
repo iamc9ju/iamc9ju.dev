@@ -77,15 +77,14 @@ export default function Hero() {
             <div className="text-brand-orange font-bold tracking-[0.2em] text-xs mb-8">
               FULL-STACK DEVELOPER
             </div>
-            <h1 className="text-5xl md:text-6xl xl:text-7xl font-semibold leading-tight mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 md:mb-8">
               ถ้าคุณต้องการ<br />
               <span className="text-brand-orange">Software Product</span>
             </h1>
  
-            <p className="text-foreground/40 text-lg md:text-xl mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-foreground/40 text-base md:text-xl mb-10 md:mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed px-4 md:px-0">
               และคุณกำลังมองหาทีมงานที่มีประสบการณ์ เราคือคำตอบที่ใช่สำหรับคุณ<br />
-              เรามีประสบการณ์และความชำนาญในการพัฒนาเว็บไซต์<br />
-              หลากหลายประเภท
+              เรามีประสบการณ์และความชำนาญในการพัฒนาเว็บไซต์ หลากหลายประเภท
             </p>
             
             <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-16">
