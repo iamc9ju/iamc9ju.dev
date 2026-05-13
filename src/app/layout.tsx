@@ -13,8 +13,8 @@ const anuphan = Anuphan({
 
 
 export const metadata: Metadata = {
-  title: "Nattapong | Full-stack Developer",
-  description: "Portfolio of Nattapong, a professional Full-stack Developer building powerful digital experiences.",
+  title: "iamc9ju.dev | Full-stack Developer",
+  description: "Portfolio of Ittipol, a professional Full-stack Developer building powerful digital experiences.",
 };
 
 export default function RootLayout({
